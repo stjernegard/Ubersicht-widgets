@@ -14,7 +14,7 @@ style: """
     padding 5px 15px
     font-family "Roboto"
     font-size 13px
-    text-shadow: 0 0px 2px rgba(#000, .7)
+    text-shadow 1px 0 0 rgba(#000, .3), 0 -1px 0 rgba(#000, .3), 0 1px 0 rgba(#000, .3), -1px 0 0 rgba(#000, .3)
     -webkit-font-smoothing antialiased
 
   p
