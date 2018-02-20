@@ -62,7 +62,6 @@ style: """
   .bar
     height: bar-height
     float: widget-align
-    transition: width .2s ease-in-out
 
   .bar:first-child
     if widget-align == left
@@ -112,7 +111,7 @@ render: -> """
 
 update: (output, domEl) ->
   updateStat = (sel, usage) ->
-    percent = usage + "%"
+    percent = Math.floor(parseFloat(usage)) + "%"
     $(domEl).find(".#{sel}").text usage
     $(domEl).find(".bar-#{sel}").css "width", percent
 

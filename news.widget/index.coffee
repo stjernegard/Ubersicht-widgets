@@ -1,4 +1,4 @@
-command: "curl -s https://www.reddit.com/r/news+worldnews.json"
+command: "curl -s https://www.reddit.com/r/news+worldnews.json -A newsbot"
 
 refreshFrequency: 1000*60*10
 

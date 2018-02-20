@@ -62,7 +62,6 @@ style: """
   .bar
     height bar-height
     float widget-align
-    transition width .2s ease-in-out
 
   .bar:first-child
     if widget-align == left
