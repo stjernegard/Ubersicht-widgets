@@ -1,12 +1,11 @@
 command: "curl -s https://www.reddit.com/r/news+worldnews.json -A newsbot"
 
-refreshFrequency: 1000*60*10
+refreshFrequency: '10m'
 
 style: """
   // Position this where you want
   top 20px
   left 40px
-
   width 400px
 
   div
@@ -47,7 +46,7 @@ update: (output, domEl) ->
   try json = JSON.parse(output) catch then return
 
   doc = $(domEl).find("div").empty()
-  forEachPost first(json.data.children, 12), (post) ->
+  forEachPost first(json.data.children, 10), (post) ->
     doc.append """
       <p>
         <a class="upvotes" href="https://reddit.com#{post.permalink}">
